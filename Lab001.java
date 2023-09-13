@@ -2,36 +2,65 @@ class Lab001 {
    
 
 
-use arraylist??
+
 
 
         
-        quarterSales = new int[4];
-        private static corporateSales;
+       
 
-        public static int quarterSalesCorporate(user input){
-            // take in 4 values
-            // put them in the array, in order?
-            corporateSales =+ quarter sales[0+1+2+3]
+        public static quarterSalesCorporate {
+            
+            private static int corporateSales;
+            Scanner scanner = new Scanner(System.in);
+            int[] integers = new int[4];
+            int sum = 0;
+            String input = scanner.nextLine();
+        String[] inputArray = input.split(" ");
+
+        for (int x = 0; i < 4; x++) {
+            integers[x] = Integer.parseInt(inputArray[x]);
+            corporateSales += integers[x];
         }
 
-        public static int subscript(index){
+        for (int i = 0; i < 4; i++) {
+            System.out.print(integers[i] + " ");
+        }
+
+        System.out.println("The total sales in the corporate year is : " + corporateSales );
+    
+    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+    }
+
+        public static int subscript(int index){
              if(0<=index<=3)
             return quarterSales[index];
             else{
-                return -1
+                return -1;
             }
         }
 
         public static void main(){
             System.out.println("Please enter the four quarterly sales for Div 0 separated by a space:");
-            System.out.println(user input);
-            System.out.println("Please enter the four quarterly sales for Div 1 separated by a space:");
-            System.out.println(user input);
-            System.out.println("Please enter the four quarterly sales for Div 2 separated by a space:");
-            System.out.println(user input);
+            quarterSalesCorporate();
+            
+           
             System.out.println(table of info);
-            System.out.println("The total sales in the corporate year is : " + corporateSales );
+            
         }
 
     }
