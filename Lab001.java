@@ -1,7 +1,7 @@
 import java. util.*;
 class Lab001 {
     private static int[] quarterlySales = new int[4]; // Define the array to store quarterly sales
-
+what if i just turn this into the class and each object just runs this??
         public static void  quarterSalesCorporate (){
             double corporateSales = 0.0;
             for (int z = 0; z < 4; z++) {
