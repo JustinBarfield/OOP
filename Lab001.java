@@ -4,6 +4,9 @@ class Lab001 {
 
         public static void  quarterSalesCorporate (){
             double corporateSales = 0.0;
+            for (int z = 0; z < 4; z++) {
+                System.out.println("Please enter the four quarterly sales for Div" + z + "separated by a space:");
+            
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         String[] inputArray = input.split(" ");
@@ -22,27 +25,26 @@ class Lab001 {
         
     }
 
+        }
 
-
-    public static int subscript() {
+    public static void subscript() {
         System.out.println("Please enter the index you want to get: ");
         Scanner sub = new Scanner(System.in);
         int index = sub.nextInt();
         if (0 <= index && index <= 3) {
-            return quarterlySales[index];
+            System.out.println("Quarterly sales at index " + index + ": " + quarterlySales[index] );
         } else {
-            return -1; 
+            System.out.println("invalid index ");
         }
     }
 
        public static void main(String[] args) {
-        System.out.println("Please enter the four quarterly sales for Div 0 separated by a space:");
-        Lab001.quarterSalesCorporate();
+        
+        Lab001.quarterSalesCorporate();  
+        Lab001.subscript();
 
         
-        int indexToRetrieve = 2; 
-        int salesData = subscript(indexToRetrieve);
-        System.out.println("Quarterly sales at index " + indexToRetrieve + ": " + salesData);
+        
        
     }
 }
