@@ -5,7 +5,7 @@ class Lab001 {
         public static void  quarterSalesCorporate (){
             double corporateSales = 0.0;
             for (int z = 0; z < 4; z++) {
-                System.out.println("Please enter the four quarterly sales for Div" + z + "separated by a space:");
+                System.out.println("Please enter the four quarterly sales for Div " + z + " separated by a space:");
             
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
@@ -42,7 +42,10 @@ class Lab001 {
         
         Lab001.quarterSalesCorporate();  
         Lab001.subscript();
-
+        System.out.println("Div     q1   q2   q3   q4");
+        for (int x = 0; x < 4; x++) {
+            System.out.println(x + quarterlySales[x]);
+        }
         
         
        
