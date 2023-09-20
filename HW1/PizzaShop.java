@@ -9,6 +9,7 @@ public class PizzaShop extends PizzaShopHelper{
     
     // this declares our instance variable "toppings"
     private CS331Toppings toppings;
+    private Baker baker;
     
     
     
@@ -27,6 +28,7 @@ public class PizzaShop extends PizzaShopHelper{
 
         //this initializes our instance variable "toppings"
         this.toppings = new CS331Toppings();
+        this.baker = new Baker();
         
     }
 
@@ -38,9 +40,9 @@ public class PizzaShop extends PizzaShopHelper{
     @Override
     public void order1() {
        // System.out.println("5.2 test order1");
-        pizzaHelper.CS331Pizza pizza1 = new pizzaHelper.CS331Pizza();
-        pizza1.addMushrooms();
-        displayPrice(pizza1);
+       pizzaHelper.CS331Pizza pizza1 = new Baker().MushroomPizza();
+       this.displayPrice(pizza1);
+       
         
         
         
