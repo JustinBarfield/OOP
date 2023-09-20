@@ -55,6 +55,9 @@ public class PizzaShop extends PizzaShopHelper{
      */
     @Override
     public void order2() {
+        pizzaHelper.CS331Pizza pizza1 = new Baker().PineapplePizza();
+        new CS331Toppings().addPeppers(pizza1);
+       this.displayPrice(pizza1);
     }
 
     /**
@@ -63,6 +66,8 @@ public class PizzaShop extends PizzaShopHelper{
      */
     @Override
     public void order3(){
+        pizzaHelper.CS331Pizza pizza1 = new Baker().PineapplePepperTomatoPizza();
+       this.displayPrice(pizza1);
     }
 
     /**
