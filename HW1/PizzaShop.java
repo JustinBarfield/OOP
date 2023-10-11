@@ -42,6 +42,11 @@ public class PizzaShop extends PizzaShopHelper{
        // System.out.println("5.2 test order1");
        pizzaHelper.CS331Pizza pizza1 = new Baker().MushroomPizza();
        this.displayPrice(pizza1);
+       String workUpdate = baker.getWorkUpdate();
+       System.out.println(workUpdate);
+
+       
+
        
         
         
@@ -55,9 +60,11 @@ public class PizzaShop extends PizzaShopHelper{
      */
     @Override
     public void order2() {
-        pizzaHelper.CS331Pizza pizza1 = new Baker().PineapplePizza();
+        pizzaHelper.CS331Pizza pizza1 = new Baker().PineapplePizza(1);
         new CS331Toppings().addPeppers(pizza1);
        this.displayPrice(pizza1);
+       String workUpdate = baker.getWorkUpdate();
+       System.out.println(workUpdate);
     }
 
     /**
@@ -68,6 +75,8 @@ public class PizzaShop extends PizzaShopHelper{
     public void order3(){
         pizzaHelper.CS331Pizza pizza1 = new Baker().PineapplePepperTomatoPizza();
        this.displayPrice(pizza1);
+       String workUpdate = baker.getWorkUpdate();
+       System.out.println(workUpdate);
     }
 
     /**
@@ -76,5 +85,9 @@ public class PizzaShop extends PizzaShopHelper{
      */
     @Override
     public void order4() {
+        pizzaHelper.CS331Pizza pizza1 = new Baker().SpinachPepperTomatoPizza();
+       this.displayPrice(pizza1);
+       String workUpdate = baker.getWorkUpdate();
+       System.out.println(workUpdate);
     }
 }
