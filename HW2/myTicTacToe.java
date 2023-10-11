@@ -9,14 +9,14 @@ public class myTicTacToe implements cs331TicTacToeGame {
     
     cs331TicTacToeBoard board = new cs331TicTacToeBoard();
     cs331TicTacToeController controller = new cs331TicTacToeController();
-   String  message = ("Select a square to start playing");
+  // String  message = ("Select a square to start playing");
 
-   this.controller.setControllerMessage(message);
-    
-    
-    public void setControllerMessage(String message){
-        
-    }
+   //myTicTacToe.setControllerMessage("Select a square to start playing");
+  /*  playerX = new Players("X");
+   playerO = new Players("O");
+   controller.addPlayer(playerX);
+   controller.addPlayer(playerO);
+   */
 
     @Override
     public void invalidSquareChosen(int arg0, int arg1) {
