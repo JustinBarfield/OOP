@@ -7,39 +7,51 @@ import javafx.stage.Stage;
 
 public class myTicTacToe implements cs331TicTacToeGame {
     
-    cs331TicTacToeBoard board = new cs331TicTacToeBoard();
-    cs331TicTacToeController controller = new cs331TicTacToeController();
-  // String  message = ("Select a square to start playing");
+    cs331TicTacToeBoard board;
+    cs331TicTacToeController controller ;
+    String message;
+    protected Players playerX;
+    protected Players playerO;
 
-   //myTicTacToe.setControllerMessage("Select a square to start playing");
-  /*  playerX = new Players("X");
-   playerO = new Players("O");
-   controller.addPlayer(playerX);
-   controller.addPlayer(playerO);
-   */
+    public myTicTacToe() {
+        board = new cs331TicTacToeBoard();
+        controller = new cs331TicTacToeController();
 
-    @Override
-    public void invalidSquareChosen(int arg0, int arg1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'invalidSquareChosen'");
+        playerX = new Players("X");
+        playerO = new Players("O");
+
+        controller.addPlayer(playerX);
+        controller.addPlayer(playerO);
+
+        controller.setControllerMessage("Select a square to start playing.");
+    }
+    
+        
+    void setControllerMessage() {
+    controller.setControllerMessage(message);    
     }
 
     @Override
+public void invalidSquareChosen(int row, int col) {
+    String currentPlayerSymbol = playerX.getCurrentPlayerSymbol();
+    controller.setControllerMessage("Square at row " + row + ", col " + col + " has already been taken by Player " + currentPlayerSymbol + ". Try again.");
+}
+    
+    
+
+    @Override
     public void noWinner() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'noWinner'");
+        controller.setControllerMessage("its a tie");
     }
 
     @Override
     public void playerWins() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'playerWins'");
+        controller.setControllerMessage("Player Wins");
     }
 
     @Override
     public void restartGame() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'restartGame'");
+        myTicTacToe ticTacToeGame = new myTicTacToe();
     }
     
 }
