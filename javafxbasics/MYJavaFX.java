@@ -12,6 +12,12 @@ public class MYJavaFX extends Application {
             myStage.setScene(scene);
             myStage.show();
             
+            Stage secondaryStage = new Stage();
+            Scene myScene = new Scene(new Button("Close"), 200, 300);
+            secondaryStage.setScene(myScene);
+            secondaryStage.show();
+
+
         }
 
     public static void main(String[] args) {
