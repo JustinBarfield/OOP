@@ -29,10 +29,11 @@ public Players getCurrentPlayer() {
 
     if ("X".equals(currentPlayerSymbol)) {
         return playerX;
-    } else if ("O".equals(currentPlayerSymbol)) 
+    } else if ("O".equals(currentPlayerSymbol)) {
         return playerO;
-    return playerO;
-    
+    } else {
+        throw new IllegalStateException("Invalid player symbol: " + currentPlayerSymbol);
+    }
 }
 public String getCurrentPlayerSymbol() {
     

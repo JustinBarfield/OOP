@@ -2,7 +2,6 @@ import cs331Helper.cs331TicTacToeBoard;
 import cs331Helper.cs331TicTacToeController;
 import cs331Helper.cs331TicTacToeFrame;
 import cs331Helper.cs331TicTacToeGame;
-import cs331Helper.cs331TicTacToeSquare;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
@@ -35,8 +34,6 @@ public class myTicTacToe implements cs331TicTacToeGame {
 
     @Override
 public void invalidSquareChosen(int row, int col) {
-    cs331TicTacToeSquare square = board.squareAt(row, col);
-    square.flashColor(Color.RED);
     String currentPlayerSymbol = playerX.getCurrentPlayerSymbol();
     controller.setControllerMessage("Square at row " + row + ", col " + col + " has already been taken by Player " + currentPlayerSymbol + ". Try again.");
 }
