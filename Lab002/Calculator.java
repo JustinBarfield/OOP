@@ -1,5 +1,7 @@
-import exceptions.IllegalInputException;
-import exceptions.QuitException;
+import .QuitException;
+import .DivideByZeroException;
+import .IllegalInputException;
+import .CalculatorException;
 
 /**
  * The Calculator class provides functionality for parsing input strings
@@ -129,28 +131,50 @@ public class Calculator
     {
         // Pull out the tokens
         String[] tokens = input.split(" ");
-        try 
-        {
-            
-            // TODO: complete implementation.
-        }
-        catch (QuitException e)
-        {
-            // TODO: complete implementation.
-        }
-        catch (IllegalInputException e)
-        {
-            // TODO: complete implementation.
-        }
-        catch (CalculatorException e)
-        {
-            // This catches the remaining CalculatorException case: DivideByZeroException
-            // TODO: complete implementation.
+        System.out.println("Input was: " + input);
+        try {
+            if (tokens.length != 3) {
+                // If the input is not in the expected format (e.g., "operand1 operator operand2")
+                throw new IllegalInputException("Invalid input format");
+            }
+    
+            double operand1 = Double.parseDouble(tokens[0]);
+            double operand2 = Double.parseDouble(tokens[2]);
+            String operator = tokens[1];
+    
+            double result = 0.0;
+    
+            switch (operator) {
+                case "+":
+                    result = operand1 + operand2;
+                    break;
+                    case "-":
+                result = operand1 - operand2;
+                break;
+            case "*":
+                result = operand1 * operand2;
+                break;
+            case "/":
+                if (operand2 == 0) {
+                    throw new DivideByZeroException();
+                }
+                result = operand1 / operand2;
+                break;
+            default:
+                throw new IllegalInputException("Unsupported operator: " + operator);
         }
 
-        // TODO: complete implementation.
-
-        // Quit has not been specified
-        return false;
+        System.out.println("The result is: " + result);
+    } catch (DivideByZeroException e) {
+        System.out.println("Tried to divide by zero");
+    } catch (IllegalInputException e) {
+        System.out.println("Illegal input: " + e.getMessage());
+    } catch ( e) {
+        System.out.println("CalculatorException: " + e.getMessage());
+    } catch (Exception e) {
+        System.out.println("An unexpected exception occurred: " + e.getMessage());
     }
+
+    return false;
+}
 }
