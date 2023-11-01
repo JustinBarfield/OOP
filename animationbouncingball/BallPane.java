@@ -1,8 +1,9 @@
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-
-
+import javafx.util.Duration;
 public class BallPane extends Pane {
     private double radius =20;
     private double x = radius, y= radius;
@@ -19,14 +20,26 @@ public class BallPane extends Pane {
         ball.setFill(Color.BLUE);
         getChildren().add(ball);
 
-        animation = new Timeline(new KeyFrame(Duration.millis(50), e-> MoveBall()));
+        animation = new Timeline(new KeyFrame(Duration.millis(50), e-> moveBall()));
+        animation.setCycleCount(Timeline.INDEFINITE);
+        animation.play();
     }
 
     protected void moveBall(){
+
+        if(y < radius || y+radius> getHeight()){|
+        dy *= -1;
+    }
+    if(x < radius || x+radius > getWidth()){|
+        dx *= -1;
+    }
+
+    
+
         x+=dx;
         y+=dy;
         ball.setCenterX(x);
-        ball.seCenterY(y);
+        ball.setCenterY(y);
 
     }
 }

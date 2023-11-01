@@ -1,7 +1,8 @@
-import .QuitException;
-import .DivideByZeroException;
-import .IllegalInputException;
-import .CalculatorException;
+package calculator;
+import calculator.QuitException;
+import calculator.DivideByZeroException;
+import calculator.IllegalInputException;
+import calculator.CalculatorException;
 
 /**
  * The Calculator class provides functionality for parsing input strings
