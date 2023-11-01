@@ -4,8 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-        
+        {
+            "type": "java",
+            "name": "ObservableObject",
+            "request": "launch",
+            "mainClass": "ObservableObject",
+            "projectName": "javafxbasics_aa14e77a"
+        },
         {
             "type": "java",
             "name": "Current File",
@@ -19,7 +24,6 @@
             "mainClass": "CircleInPane",
             "projectName": "javafxbasics_aa14e77a",
             "vmArgs": "--module-path C:\\Users\\trump\\OneDrive\\Desktop\\ObjectOriented\\javafx-sdk-20.0.2\\lib --add-modules javafx.controls,javafx.fxml"
-        }
         },
         {
             "type": "java",
@@ -27,8 +31,7 @@
             "request": "launch",
             "mainClass": "MYJavaFX",
             "projectName": "javafxbasics_aa14e77a",
-           "vmArgs": "--module-path C:\\Users\\trump\\OneDrive\\Desktop\\ObjectOriented\\javafx-sdk-20.0.2\\lib --add-modules javafx.controls,javafx.fxml"
-        }
+            "vmArgs": "--module-path C:\\Users\\trump\\OneDrive\\Desktop\\ObjectOriented\\javafx-sdk-20.0.2\\lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
