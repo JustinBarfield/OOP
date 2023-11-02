@@ -4,6 +4,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
+
 public class BallPane extends Pane {
     private double radius =20;
     private double x = radius, y= radius;
@@ -25,6 +26,21 @@ public class BallPane extends Pane {
         animation.play();
     }
 
+    public void increaseSpeed(){
+        animation.setRate(animation.getRate() + 0.1);
+
+    }
+    public void decreaseSpeed(){
+        animation.setRate(animation.getRate() - 0.1);
+        
+    }
+
+    public void pause(){
+        animation.pause();
+    }
+    public void play(){
+        animation.play();
+    }
     protected void moveBall(){
 
         if(y < radius || y+radius> getHeight()){|
