@@ -24,7 +24,7 @@ public class Bricks extends Pane{
         for (int i = 0; i < rows; i++){
             for (int j = 0; j < cols; j++){
                 Rectangle rectangle = new Rectangle(brickX + j*brickWidth, brickY + i*brickHeight, brickWidth, brickHeight);
-                rectangle.setStroke(Color.WHITE);
+                rectangle.setStroke(Color.WHITESMOKE);
                 getChildren().add(rectangle);
                 bricks.add(rectangle);
                 //hit[i][j] = 1;

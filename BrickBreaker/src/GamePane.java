@@ -6,6 +6,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
@@ -26,8 +27,10 @@ public class GamePane extends Pane{
     Bricks bricks = new Bricks();
 
     public GamePane(){
+        ball.setFill(Color.BLUE);
+        paddle.setFill(Color.RED);
         getChildren().addAll(ball, paddle, bricks);
-        ballAnimation = new Timeline(new KeyFrame(new Duration(5), e->moveBall()));
+        ballAnimation = new Timeline(new KeyFrame(new Duration(6), e->moveBall()));
         ballAnimation.setCycleCount(Timeline.INDEFINITE);
     }
 
