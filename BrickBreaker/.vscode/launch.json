@@ -6,17 +6,18 @@
     "configurations": [
         {
             "type": "java",
-            "name": "App",
+            "name": "Current File",
             "request": "launch",
-            "mainClass": "App",
-            "projectName": "BrickBreaker_14a4308c"
+            "mainClass": "${file}"
         },
         {
             "type": "java",
-            "name": "Current File",
+            "name": "App",
             "request": "launch",
-            "mainClass": "${file}",
+            "mainClass": "src.App",
+            "projectName": "BrickBreaker_14a4308c",
             "vmArgs": "--module-path C:\\Users\\trump\\OneDrive\\Desktop\\ObjectOriented\\javafx-sdk-20.0.2\\lib --add-modules javafx.controls,javafx.fxml"
+            
         }
     ]
 }
